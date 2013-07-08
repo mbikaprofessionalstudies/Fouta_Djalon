@@ -5,6 +5,8 @@ var index1 = require ('./index.html');
 var fs = require ('fs');
 var express = require ('express');
 var app = express.createServer (express.logger());
+index1 = new Buffer(fs.readFileSync('index.html'));
+//index1 = fs.readFileSync('index.html');
 //
 // Function index2 to process the message from index.html
 //
