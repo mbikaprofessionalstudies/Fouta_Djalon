@@ -1,23 +1,20 @@
-// #!/usr/bin/env node
-// var index1 = require ('./index.html');
-// var index1 = new Buffer('Hello World from index.html');
-// var index1 = require ('index1');
+#!/usr/bin/env node
 var fs = require ('fs');
 var express = require ('express');
 var app = express.createServer (express.logger());
- index1 = fs.readFileSync('./index.html', null);
-//index1 = fs.readFileSync('index.html');
+// index1 = fs.readFileSync('./index.html', null);
 //
 // Function index2 to process the message from index.html
 //
-var Hello = new Buffer('Hello World from index.html', "utf-8");
+var Outfile = "World.txt";
+var Out = "Hello World from index.html\n";
   app.get('/', function(request, response) {
-                          response.send(Hello.toString('utf-8', 0, Hello.length));});
+                          response.send(Out);});
 // 
 //
+
   var port = process.env.PORT || 5000;
   app.listen(port, function() {console.log("listening on" + port);});
-var outfile = "index.txt";
-fs.writeFileSync = (outfile, Hello.toString('utf-8', 0, Hello.length));
-console.log("Script: " + fs + "\nWrote: " + Hello.toString('utf-8', 0, Hello.length) + "TO: " + outfile);
+fs.writeFileSync = (Outfile, Out);
+console.log("Script: " + 'web.js' + "\nWrote: " + Out + "TO: " + Outfile);
 //
