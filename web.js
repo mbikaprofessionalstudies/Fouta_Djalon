@@ -18,5 +18,6 @@ var Hello = new Buffer('Hello World from index.html', "utf-8");
   var port = process.env.PORT || 5000;
   app.listen(port, function() {console.log("listening on" + port);});
 var outfile = "index.txt";
-fs.writeFileSync = (outfile, index1);
+fs.writeFileSync = (outfile, Hello.toString('utf-8', 0, Hello.length));
+console.log("Script: " + fs + "\nWrote: " + Hello.toString('utf-8', 0, Hello.length) + "TO: " + outfile);
 //
