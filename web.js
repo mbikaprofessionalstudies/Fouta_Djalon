@@ -1,5 +1,10 @@
 // #!/usr/bin/env node
+var index3 = require ('./index.html');
 var index1 = require ('./index.html');
+exports.index1 = function (index3)
+{
+  return index3;
+} 
 // var index1 = 'Hello World from index.html';
 // var index1 = require ('index1');
 var fs = require ('fs');
