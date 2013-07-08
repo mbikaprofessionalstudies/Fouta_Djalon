@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-var index1 = require ('./index.html');
+// var index1 = require ('./index.html');
+var index1 = 'Hello World from index.html';
 var fs = require ('fs');
 var express = require ('express');
 var app = express.createServer (express.logger());
