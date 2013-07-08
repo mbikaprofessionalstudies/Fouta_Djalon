@@ -1,11 +1,11 @@
 // #!/usr/bin/env node
  var index1 = require ('./index.html');
-// var index1 = 'Hello World from index.html';
+// var index1 = new Buffer('Hello World from index.html');
 // var index1 = require ('index1');
 var fs = require ('fs');
 var express = require ('express');
 var app = express.createServer (express.logger());
- index1 = fs.readFileSync('index.html', null);
+ index1 = fs.readFileSync('./index.html', null);
 //index1 = fs.readFileSync('index.html');
 //
 // Function index2 to process the message from index.html
@@ -14,7 +14,7 @@ var app = express.createServer (express.logger());
                           response.send(index1);});
 //
   var port = process.env.PORT || 5000;
-  app.listen(port, function() {console.log("listening on" + port);});
+  app.listen(port, function() {console.log("listening on" + port + index1);});
 var outfile = "index.txt";
 fs.writeFileSync = (outfile, index1);
 //
